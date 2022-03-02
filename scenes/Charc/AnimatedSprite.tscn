@@ -1,0 +1,162 @@
+[gd_scene load_steps=19 format=2]
+
+[ext_resource path="res://scenes/Charc/AnimatedSprite.gd" type="Script" id=1]
+[ext_resource path="res://scenes/Charc/Farm.gd" type="Script" id=2]
+[ext_resource path="res://scenes/Charc/CrossBow.gd" type="Script" id=3]
+[ext_resource path="res://scenes/Charc/TwoHandSword2.gd" type="Script" id=4]
+[ext_resource path="res://scenes/Charc/Manufacture.gd" type="Script" id=5]
+[ext_resource path="res://scenes/Charc/Sneak.gd" type="Script" id=6]
+[ext_resource path="res://scenes/Charc/Unlock.gd" type="Script" id=7]
+[ext_resource path="res://scenes/Charc/OneHandSword.gd" type="Script" id=8]
+[ext_resource path="res://scenes/Charc/Steal.gd" type="Script" id=9]
+[ext_resource path="res://scenes/Charc/Attack.gd" type="Script" id=10]
+[ext_resource path="res://scenes/Charc/Science.gd" type="Script" id=11]
+[ext_resource path="res://scenes/Charc/Swim.gd" type="Script" id=12]
+[ext_resource path="res://scenes/Charc/Heal.gd" type="Script" id=13]
+[ext_resource path="res://scenes/Charc/Run.gd" type="Script" id=14]
+[ext_resource path="res://scenes/Charc/Assassinate.gd" type="Script" id=15]
+[ext_resource path="res://scenes/Charc/Build.gd" type="Script" id=16]
+[ext_resource path="res://scenes/Charc/Trade.gd" type="Script" id=18]
+[ext_resource path="res://scenes/Charc/Skills.gd" type="Script" id=19]
+
+[node name="AnimatedSprite" type="AnimatedSprite"]
+script = ExtResource( 1 )
+__meta__ = {
+"_editor_description_": "所有人形角色的数据和动画"
+}
+
+[node name="Skills" type="Node" parent="."]
+script = ExtResource( 19 )
+
+[node name="Theft" type="Node" parent="Skills"]
+__meta__ = {
+"_editor_description_": "偷窃"
+}
+
+[node name="Sneak" type="Node" parent="Skills/Theft"]
+script = ExtResource( 6 )
+__meta__ = {
+"_editor_description_": "潜行"
+}
+
+[node name="Unlock" type="Node" parent="Skills/Theft"]
+script = ExtResource( 7 )
+__meta__ = {
+"_editor_description_": "开锁"
+}
+
+[node name="Steal" type="Node" parent="Skills/Theft"]
+script = ExtResource( 9 )
+__meta__ = {
+"_editor_description_": "偷东西"
+}
+
+[node name="Assassinate" type="Node" parent="Skills/Theft"]
+script = ExtResource( 15 )
+__meta__ = {
+"_editor_description_": "暗杀"
+}
+
+[node name="Sport" type="Node" parent="Skills"]
+__meta__ = {
+"_editor_description_": "运动技能"
+}
+
+[node name="Run" type="Node" parent="Skills/Sport"]
+script = ExtResource( 14 )
+__meta__ = {
+"_editor_description_": "奔跑"
+}
+
+[node name="Swim" type="Node" parent="Skills/Sport"]
+script = ExtResource( 12 )
+__meta__ = {
+"_editor_description_": "游泳"
+}
+
+[node name="Engineer" type="Node" parent="Skills"]
+__meta__ = {
+"_editor_description_": "工程技能"
+}
+
+[node name="Build" type="Node" parent="Skills/Engineer"]
+script = ExtResource( 16 )
+__meta__ = {
+"_editor_description_": "建造和修复"
+}
+
+[node name="Science" type="Node" parent="Skills/Engineer"]
+script = ExtResource( 11 )
+__meta__ = {
+"_editor_description_": "研发"
+}
+
+[node name="SpellCasting" type="Node" parent="Skills"]
+__meta__ = {
+"_editor_description_": "施法技能"
+}
+
+[node name="Heal" type="Node" parent="Skills/SpellCasting"]
+script = ExtResource( 13 )
+__meta__ = {
+"_editor_description_": "治疗魔法技能"
+}
+
+[node name="Attack" type="Node" parent="Skills/SpellCasting"]
+script = ExtResource( 10 )
+__meta__ = {
+"_editor_description_": "攻击魔法技能"
+}
+
+[node name="Weapon" type="Node" parent="Skills"]
+
+[node name="Melee" type="Node" parent="Skills/Weapon"]
+__meta__ = {
+"_editor_description_": "近战技能"
+}
+
+[node name="OneHandSword" type="Node" parent="Skills/Weapon/Melee"]
+script = ExtResource( 8 )
+__meta__ = {
+"_editor_description_": "单手剑"
+}
+
+[node name="TwoHandSword2" type="Node" parent="Skills/Weapon/Melee"]
+script = ExtResource( 4 )
+__meta__ = {
+"_editor_description_": "双手剑"
+}
+
+[node name="Remote" type="Node" parent="Skills/Weapon"]
+__meta__ = {
+"_editor_description_": "远程技能"
+}
+
+[node name="CrossBow" type="Node" parent="Skills/Weapon/Remote"]
+script = ExtResource( 3 )
+__meta__ = {
+"_editor_description_": "十字弩"
+}
+
+[node name="Life" type="Node" parent="Skills"]
+__meta__ = {
+"_editor_description_": "生活技能"
+}
+
+[node name="Farm" type="Node" parent="Skills/Life"]
+script = ExtResource( 2 )
+__meta__ = {
+"_editor_description_": "种地"
+}
+
+[node name="Manufacture" type="Node" parent="Skills/Life"]
+script = ExtResource( 5 )
+__meta__ = {
+"_editor_description_": "制造产品"
+}
+
+[node name="Trade" type="Node" parent="Skills/Life"]
+script = ExtResource( 18 )
+__meta__ = {
+"_editor_description_": "交易"
+}

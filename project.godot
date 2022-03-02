@@ -8,6 +8,16 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "Node",
+"class": "Skill",
+"language": "GDScript",
+"path": "res://assets/scripts/Skill.gd"
+} ]
+_global_script_class_icons={
+"Skill": ""
+}
+
 [application]
 
 config/name="Godot Game Project By Devs On The Internet"
@@ -25,10 +35,14 @@ window/size/width=1280
 window/size/height=800
 window/dpi/allow_hidpi=true
 
+[gui]
+
+theme/custom_font="res://assets/font/normal.tres"
+
 [physics]
 
 common/enable_pause_aware_picking=true
 
 [rendering]
 
-environment/default_environment="res://default_env.tres"
+environment/default_environment="res://scenes/Charc/default_env.tres"
