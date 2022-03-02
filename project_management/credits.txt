@@ -1,2 +1,4 @@
-PM: @rayxuln
+PM: rayxuln
 
+Developers:
+WuMing757
