@@ -1,4 +1,4 @@
-[gd_scene load_steps=24 format=2]
+[gd_scene load_steps=19 format=2]
 
 [ext_resource path="res://scenes/Charc/AnimatedSprite.gd" type="Script" id=1]
 [ext_resource path="res://scenes/Charc/Farm.gd" type="Script" id=2]
@@ -16,33 +16,10 @@
 [ext_resource path="res://scenes/Charc/Run.gd" type="Script" id=14]
 [ext_resource path="res://scenes/Charc/Assassinate.gd" type="Script" id=15]
 [ext_resource path="res://scenes/Charc/Build.gd" type="Script" id=16]
-[ext_resource path="res://assets/pics/chara2.png" type="Texture" id=17]
 [ext_resource path="res://scenes/Charc/Trade.gd" type="Script" id=18]
 [ext_resource path="res://scenes/Charc/Skills.gd" type="Script" id=19]
 
-[sub_resource type="AtlasTexture" id=1]
-atlas = ExtResource( 17 )
-region = Rect2( 78, 180, 26, 36 )
-
-[sub_resource type="AtlasTexture" id=2]
-atlas = ExtResource( 17 )
-region = Rect2( 104, 180, 26, 36 )
-
-[sub_resource type="AtlasTexture" id=3]
-atlas = ExtResource( 17 )
-region = Rect2( 130, 180, 26, 36 )
-
-[sub_resource type="SpriteFrames" id=4]
-animations = [ {
-"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ) ],
-"loop": true,
-"name": "default",
-"speed": 5.0
-} ]
-
 [node name="AnimatedSprite" type="AnimatedSprite"]
-frames = SubResource( 4 )
-frame = 2
 script = ExtResource( 1 )
 __meta__ = {
 "_editor_description_": "所有人形角色的数据和动画"
