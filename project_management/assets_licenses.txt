@@ -8,3 +8,6 @@
 /assets/music/bgm.mp3
 CC0
 
+/assets/font/NotoSansSC-Regular.otf
+OFL
+
