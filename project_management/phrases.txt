@@ -3,7 +3,8 @@ Developer: WuMing757
 Plan Start: 2022.3.2
 Plan End: 2022.3.2
 Start: 2022.3.2
-End: 
+End: 2022.3.2
 Plan Features:
 - 人物属性
 Features:
+- 增加人物基础属性和技能概况
