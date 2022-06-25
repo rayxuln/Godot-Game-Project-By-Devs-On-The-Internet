@@ -8,3 +8,17 @@ Plan Features:
 - 人物属性
 Features:
 - 增加人物基础属性和技能概况
+
+[Phase 2]
+Developer: DoveG
+Plan Start: 2022.6.24
+Plan End: 2022.6.26
+Start: 2022.6.24
+End: 2022.6.25
+Plan Features:
+- 2D横板地图
+- 可以左右行走、跳跃的玩家
+- 抵达终点获胜
+- 触发陷阱失败
+Features:
+- 人物实例、地图、互动物体、游戏结束界面
